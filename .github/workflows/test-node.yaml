@@ -17,11 +17,11 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: 14
+          node-version: 12
 
       - name: Format code
         run: |
-          npm install prettier --prefix ./frontend
+          npm install prettier @2.8.8 --prefix ./frontend
           make prettier-check
 
       - name: Lint code
@@ -40,7 +40,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: 14
+          node-version: 12
 
       - name: Fetch Kubeflow and install common code dependencies
         run: |
